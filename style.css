@@ -1,0 +1,123 @@
+:root{
+    /*Primary*/
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    /*Neutral*/
+    --Verydarkmain: hsl(217, 54%, 11%);
+    --Verydarkcard: hsl(216, 50%, 16%);
+    --Verydarkline: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+
+    font-size: 1.125rem;
+    font-family: 'Outfit',sans-serif;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    background: var(--Verydarkmain);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+.card{
+    padding: 1.375rem;
+    width: 16rem;
+    background: var(--Verydarkcard);
+    max-width: 21.875rem;
+    border-radius: .9375rem;
+}
+.image_container{
+    position: relative;
+    width: 100%;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    background: var(--Cyan);
+    opacity: 0;
+    border-radius: .9375rem;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image_container:hover .overlay{
+    opacity: .5;
+    cursor: pointer;
+}
+.card__img{
+    max-width: 100%;
+    border-radius: .625rem;
+}
+
+.card__title{
+    color: var(--White);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+.card__title:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.card__text{
+    color: var(--Softblue);
+    font-weight: 400;
+}
+.card__items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .9375rem;
+}
+.item1{
+    color: var(--Cyan);
+    display: flex;
+    align-items: center;
+}
+.card__item1--text{
+    margin: .375rem;
+}
+.item2{
+    color: var(--Softblue);
+    display: flex;
+    align-items: center;
+}
+.card__item2--text{
+    margin: .375rem;
+}
+hr{
+    border: 1px solid var(--Verydarkline);
+}
+.creator{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.creator__for{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.footer__avatar{
+    max-width: 1.75rem;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    justify-content: flex-start;
+}
+.footer__text{
+    color: var(--Softblue);
+    margin-left: .9375rem;
+}
+.footer__span{
+    color: var(--White);
+}
+.footer__span:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
